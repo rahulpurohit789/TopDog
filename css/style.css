@@ -21,6 +21,35 @@
     background-position: 0% 50%;
   }
 }
+video {
+  display: block; 
+}
+
+@media screen and (max-width: 600px) {
+  video {
+      display: none; 
+  }
+  .nav-bk{
+    background: #01110f;
+    background: -webkit-linear-gradient(to right,rgb(197, 133, 133),  #e34e7b , #eb385c);
+    background: linear-gradient(to right,rgb(197, 133, 133), #b64769, #eb385c);
+    }
+    .change{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+    }
+    .topdog{
+      font-weight: 900;
+      font-style: initial;
+    }
+  }
+@media screen and (max-width: 600px) {
+  video[controls] {
+      display: none;
+  }
+}
 .video{
   border-top-right-radius: 12%;
   border-top-left-radius: 13%;

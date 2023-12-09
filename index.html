@@ -22,11 +22,30 @@
     </div>
   </div>
 
+<script>
+ 
+  window.addEventListener('DOMContentLoaded', function () {
+      var videoElement = document.getElementById('myVideo');
+
+    
+      function checkScreenWidth() {
+          if (window.innerWidth > 600) {
+              videoElement.muted = false;
+              videoElement.setAttribute('controls', 'controls');
+          } else {
+              videoElement.muted = true; 
+              videoElement.removeAttribute('controls'); 
+          }
+      }
+      checkScreenWidth();
+      window.addEventListener('resize', checkScreenWidth);
+  });
+</script>
   <!-- Title --> 
   <section>
-    <nav class="navbar navbar-expand-lg nav-bk" >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">TopDog</a>
+    <nav  class="navbar navbar-expand-lg nav-bk" >
+      <div class="container-fluid ">
+        <a class="navbar-brand topdog" href="#">TopDog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -63,7 +82,7 @@
     <div class="container col-xxl-8 px-4 pt-5 h-auto">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-0">
       <div class="col-10 col-sm-8 col-lg-6">
-        <video type="video/mp4" autoplay loop src="./images/dogplay.mp4" class="d-block video mx-lg-auto img-fluid pb-0 pt-1" alt="Bootstrap Themes" width="250" height="350" ></video>
+        <video id="myVideo" type="video/mp4" autoplay controls loop src="./images/dogplay.mp4" class="d-block video mx-lg-auto img-fluid pb-0 pt-1" alt="Bootstrap Themes" width="250" height="350" ></video>
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Meet new and interesting dogs nearby.</h1>
@@ -147,18 +166,18 @@
    <div class="d-flex flex-column justify-content-center align-items-center dog p-2"><img id="dog"  src="./images/dog-img.jpg" alt="dog-img">
    <p class="pt-2">Pebbles, New York</p>
   </div>
-  <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-sm-12">
+  <div class="container ">
+          <div class="row  ">
+            <div class=" change col-lg-3 col-sm-12">
               <img src="./images/techcrunch.png" alt="techcrunch" height="30">
             </div>
-            <div class="col-lg-3 col-sm-12">
+            <div class="col-lg-3 change col-sm-12">
               <img src="./images/mashable.png" alt="mashable" height="30">
             </div>
-            <div class="col-lg-3 col-sm-12">
+            <div class="col-lg-3 change col-sm-12">
               <img src="./images/bizinsider.png" alt="bizinsider" height="30">
             </div>
-            <div class="col-lg-3 col-sm-12">
+            <div class="col-lg-3 change col-sm-12">
               <img src="./images/tnw.png" alt="tnw" height="30">
             </div>
           </div>
@@ -174,7 +193,7 @@
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-header m-1 py-3">
+          <div class="card-header py-3">
             <h4 class="my-0 fw-normal">Chihuahua</h4>
           </div>
           <div class="card-body">
@@ -191,7 +210,7 @@
       </div>
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-header m-1 py-3">
+          <div class="card-header py-3">
             <h4 class="my-0 fw-normal">Labrador
             </h4>
           </div>
@@ -209,7 +228,7 @@
       </div>
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm border-primary">
-          <div class="card-header py-3 m-1 text-bg-primary border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
             <h4 class="my-0 fw-normal">German Shepherd</h4>
           </div>
           <div class="card-body">
